@@ -1,12 +1,16 @@
 import {Request, Response } from "express";
 
 type helloResponse = {
-    messsage: string;
+    message: string;
 }
 
 export const sayHello = (req: Request, res: Response):void => {
+
+    // get data from front
+    const data = req.body;
+
     const response: helloResponse = {
-        messsage: "Hello World"
+        message: `Hello ${data.name}`,
     }
     res.json(response)
 }

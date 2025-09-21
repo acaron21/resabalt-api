@@ -3,6 +3,7 @@ import {sayHello} from "../controllers/helloController"
 
 const router = Router();
 
-router.get("/", sayHello)
+// test with "Hello"
+router.post("/", sayHello)
 
 export default router;

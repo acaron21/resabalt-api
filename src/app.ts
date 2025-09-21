@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import cors from "cors";
-import bookingRoutes from "./routes/helloRoutes";
+import helloRoutes from "./routes/helloRoutes";
 
 const app: Application = express();
 
@@ -9,6 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/bookings", bookingRoutes);
+app.use("/api/hello", helloRoutes);
 
 export default app;
